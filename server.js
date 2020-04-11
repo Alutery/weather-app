@@ -4,6 +4,7 @@ const express = require('express');
 const nunjucks = require('nunjucks');
 const bodyParser = require('body-parser');
 const request = require('request');
+const url = require('url');
 
 const app = express();
 
@@ -33,10 +34,19 @@ function parseBody(response) {
 }
 
 app.post('/', function (req, res) {
-    const city = req.body.city;
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-    
-    request(url, function (err, response, body) {
+    const city = req.body.city;  
+    const apiCall = url.format({
+        protocol: 'https',
+        hostname: 'api.openweathermap.org',
+        pathname: '/data/2.5/weather',
+        query: {
+            appid: apiKey,
+            units: 'metric',
+            q: city,
+        }
+    });
+
+    request(apiCall, function (err, response, body) {
         if(err){
             res.status(500).send({weather: null, error: 'Error, please try again'});
         } else {
