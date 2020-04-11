@@ -41,4 +41,7 @@
 # требуется Node.js
 npm i
 node server.js
+
+> Listening on port 8080
+> Go to: http://localhost:8080/
 ```
