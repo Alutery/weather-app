@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">Сервис прогноза погоды</h1>
+        </div>
+    </header>
+    <main class="weather">
+        <div class="container">
+            <form action="/" method="post" id="weatherForm" name="weatherForm">
+                <input id="cityInput" name="city" type="text" class="weather__input" placeholder="Enter City" required>
+                <div class="error-message error-message_hide" id="errorMessage">Error</div>
+                <input id="submit" type="submit" class="weather__button" value="Show weather">
+            </form>
+            <div class="weather__result">
+                <section class="cards">
+
+                    <div class="card">
+                        <i class="fas fa-thermometer-half"></i>
+                        <p id="tempCard"></p>
+                    </div>
+
+                    <div class="card">
+                        <i class="fas fa-cloud-sun"></i>
+                        <p id="descCard"></p>
+                    </div>
+
+                    <div class="card">
+                        <i class="fas fa-wind"></i>
+                        <p id="windCard"></p>
+                    </div>
+
+                    <div class="card">
+                        <i class="fas fa-tint"></i>
+                        <p id="humidityCard"></p>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

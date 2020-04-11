@@ -1,0 +1,116 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e1f2fb;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+}
+
+.header__title {
+    padding: 0;
+    margin: 0;
+    font-size: 3em;
+    color: #555;
+
+    user-select: none;
+}
+
+.header {
+    margin-top: 60px;
+}
+
+.container {
+    max-width: 700px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+
+    background-color: #f1f9f9;
+    border: 1px solid #ddd;
+}
+
+/* form */
+.weather__input {
+    display: block;
+    padding: 10px 15px;
+    margin: 30px 0 0;
+    width: 100%;
+    min-width: 290px;
+    box-sizing: border-box;
+    border: 0px;
+    border-bottom: 1px solid #555;
+
+    color: #666;
+    font-size: 2.5em;
+
+    background-color: #f1f9f9;
+    outline: none;
+}
+
+.weather__button {
+    background-color: #f3dfe3;
+    border: 2px solid #e9b2bc;
+    margin-top: 40px;
+    padding: 10px 30px;
+    width: 100%;
+    min-width: 300px;
+
+    font-size: 2em;
+    color: #555;
+
+    outline: none;
+    cursor: pointer;
+}
+
+.weather__button:hover {
+    background-color: #e9b2bc;
+}
+
+/* cards */
+.weather__result {
+    margin-top: 20px;
+    border-top: 2px dashed #ccc;
+    min-height: 200px;
+}
+
+.cards {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    margin-top: 20px;
+    padding-top: 20px;
+    flex: 0 1 calc(25% - 1em);
+    flex-direction: column;
+    
+    min-width: 150px;
+    min-height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1.8em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.fas, .fal {
+    font-size: 60px; 
+    color: #666;
+}
+
+.error-message {
+    color: #cc0033;
+    font-size: 1.4em;
+    margin: 4px 0 0;
+}
+
+.error-message_hide {
+    visibility: hidden;
+}
